@@ -1,28 +1,40 @@
-\PassOptionsToPackage{dvipsnames}{xcolor}
-\documentclass{beamer}
-\usepackage{listings}
+\include{begin}
 \include{lecture_SigSys_formulas}
+\usepackage{listings}
+\title{Data Fusion\\
+An Intuitive Look}  
+\author{Dr Salman Aslam}
+\date{} 
 
-	\newenvironment{changemargin}[2]
-	{
-	  	\begin{list}{}
-		{
-			\setlength{\topsep}{0pt}%
-			\setlength{\leftmargin}{#1}%
-			\setlength{\rightmargin}{#2}%
-			\setlength{\listparindent}{\parindent}%
-			\setlength{\itemindent}{\parindent}%
-			\setlength{\parsep}{\parskip}%
-		}
-	  	\item[]
-		}
-		{\end{list}
-	}
+
+
+%##################################
+\begin{document}
+%##################################
+\begin{frame}[plain]
+\vspace{0.8in}
+\titlepage
+\end{frame}
+
+\begin{frame}[plain]\mypagenumwhite\Large
+\frametitle{\textbf{Sequence}}
+\setcounter{tocdepth}{1}
+\tableofcontents
+\end{frame} 
+
+\begin{frame}[plain]\mypagenumwhite\small
+\frametitle{\textbf{Sequence : detailed}}
+\setcounter{tocdepth}{2}
+\tableofcontents%[pausesections]
+\end{frame} 
+
+
+
 	
 	\makeatletter
   \newcommand\tinyvvv{\@setfontsize\tinyvvv{0.5pt}{0.5}}
 \makeatother
-\begin{document}
+
 
 \begin{frame}
 \frametitle{Kalman Filter/Observer/Estimator}
@@ -38,6 +50,13 @@
 \includegraphics[width=0.75\textwidth]{figs/CONTROLS_portrait_RudolfKalman.jpg}
 \end{figure}
 \end{frame}
+
+
+%#####
+\section{Introduction}
+%#####
+
+
 
 
 
@@ -538,7 +557,20 @@ K&=\frac{C\sigma_1^2}{C^2\sigma_1^2+\sigma_2^2}\\
 
 
 
+%#####
+\section{A Naive Start}
+%#####
 
+
+
+%#####
+\section{Observing and Experiencing}
+%#####
+
+
+%#####
+\section{We Are Wiser}
+%#####
 
 \begin{frame}[plain]
 \frametitle{Kalman Filter/Observer/Estimator}
