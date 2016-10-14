@@ -1,6 +1,5 @@
 \include{begin}
 \include{lecture_SigSys_formulas}
-\usepackage{listings}
 \title{Data Fusion\\
 An Intuitive Look}  
 \author{Dr Salman Aslam}
@@ -11,18 +10,18 @@ An Intuitive Look}
 %##################################
 \begin{document}
 %##################################
-\begin{frame}[plain]
+\begin{frame}[plain]\pw\Large
 \vspace{0.8in}
 \titlepage
 \end{frame}
 
-\begin{frame}[plain]\mypagenumwhite\Large
+\begin{frame}[plain]\pw\Large
 \frametitle{\textbf{Sequence}}
 \setcounter{tocdepth}{1}
 \tableofcontents
 \end{frame} 
 
-\begin{frame}[plain]\mypagenumwhite\small
+\begin{frame}[plain]\pw\Large
 \frametitle{\textbf{Sequence : detailed}}
 \setcounter{tocdepth}{2}
 \tableofcontents%[pausesections]
@@ -30,17 +29,14 @@ An Intuitive Look}
 
 
 
-	
-	\makeatletter
-  \newcommand\tinyvvv{\@setfontsize\tinyvvv{0.5pt}{0.5}}
-\makeatother
 
 
-\begin{frame}
+
+\begin{frame}\pw\Large
 \frametitle{Kalman Filter/Observer/Estimator}
 \framesubtitle{Introduction}
 
-\footnote{\tiny\hspace{-0.23in} \href{http://en.wikipedia.org/wiki/Rudolf_E._Kalman}{http://en.wikipedia.org/wiki/Rudolf\_E.\_Kalman}}
+\footnotetext{\tiny\hspace{-0.23in} \href{http://en.wikipedia.org/wiki/Rudolf_E._Kalman}{http://en.wikipedia.org/wiki/Rudolf\_E.\_Kalman}}
 \scriptsize
 \begin{itemize}
 \item Named after Rudolf E. Kalman
@@ -57,33 +53,18 @@ An Intuitive Look}
 %#####
 
 
-
-
-
-\begin{frame}
+\begin{frame}\pw\Large
 \frametitle{Kalman Filter/Observer/Estimator}
 \framesubtitle{Introduction \tiny cont.}
-
-\footnote{\tiny\hspace{-0.23in} \href{http://www.cl.cam.ac.uk/~rmf25/papers/Understanding the Basis of the Kalman Filter.pdf}{Faragher, Ramsey, \emph{Understanding the Basis of the Kalman Filter Via a Simple and Intuitive Derivation}, IEEE Signal Processing Magazine, Sep 2012}}
-\scriptsize
-\begin{itemize}
-\item The Kalman filter is over 50 years old but is still one of the most important and common \underline{data fusion} algorithms in use today
-\item The great success of the Kalman filter is due to 
-\begin{itemize}\scriptsize
-\item its small computational requirement
-\item elegant recursive properties, and 
-\item its status as the optimal estimator for one-dimensional linear systems with Gaussian error statistics
-\end{itemize}
-\end{itemize}
+\begin{figure}
+\includegraphics[width=1\textwidth]{figs/WFAR11_UCP_Update_Prediction_BlockDiagram.pdf}
+\end{figure}
 \end{frame}
 
 
-
-\begin{frame}
+\begin{frame}\pw\Large
 \frametitle{Kalman Filter/Observer/Estimator}
 \framesubtitle{Introduction \tiny cont.}
-
-\scriptsize
 \begin{itemize}
 \item \textbf{Bigger picture}
 \begin{itemize}\scriptsize
@@ -107,7 +88,7 @@ An Intuitive Look}
 
 
 
-%\begin{frame}
+%\begin{frame}\pw\Large
 %\frametitle{Kalman Filter/Observer/Estimator}
 %\framesubtitle{An Observer (Estimator): The Kalman Filter}
 %
@@ -121,7 +102,7 @@ An Intuitive Look}
 %\end{frame}
 
 
-%\begin{frame}
+%\begin{frame}\pw\Large
 %\frametitle{Kalman Filter/Observer/Estimator}
 %\framesubtitle{An Observer (Estimator): The Kalman Filter}
 %
@@ -137,11 +118,11 @@ An Intuitive Look}
 
 
 
-\begin{frame}
+\begin{frame}\pw\Large
 \frametitle{Kalman Filter/Observer/Estimator}
 \framesubtitle{Introduction \tiny cont.}
 
-\footnote{\tiny\hspace{-0.23in} \href{www.cs.cornell.edu/Courses/cs4758/2013sp/materials/MI63slides.pdf‎}{www.cs.cornell.edu/Courses/cs4758/2013sp/materials/MI63slides.pdf‎}}
+\footnotetext{\tiny\hspace{-0.23in} \href{www.cs.cornell.edu/Courses/cs4758/2013sp/materials/MI63slides.pdf‎}{www.cs.cornell.edu/Courses/cs4758/2013sp/materials/MI63slides.pdf‎}}
 \begin{itemize}\scriptsize
 \item \textbf{Typical uses}
 \begin{itemize}\scriptsize
@@ -167,11 +148,11 @@ An Intuitive Look}
 
 
 
-\begin{frame}
+\begin{frame}\pw\Large
 \frametitle{Kalman Filter/Observer/Estimator}
 \framesubtitle{Introduction \tiny cont.}
 
-\footnote{\tiny\hspace{-0.23in} \href{http://www.cl.cam.ac.uk/~rmf25/papers/Understanding the Basis of the Kalman Filter.pdf}{Faragher, Ramsey, \emph{Understanding the Basis of the Kalman Filter Via a Simple and Intuitive Derivation}, IEEE Signal Processing Magazine, Sep 2012}}
+\footnotetext{\tiny\hspace{-0.23in} \href{http://www.cl.cam.ac.uk/~rmf25/papers/Understanding the Basis of the Kalman Filter.pdf}{Faragher, Ramsey, \emph{Understanding the Basis of the Kalman Filter Via a Simple and Intuitive Derivation}, IEEE Signal Processing Magazine, Sep 2012}}
 \scriptsize
 \begin{itemize}
 \item From a theoretical standpoint, the Kalman filter is an algorithm permitting exact inference in a linear dynamical system, which is a Bayesian model similar to a Hidden Markov Model (HMM) but where the state space of the latent variables is continuous and where all latent and observed variables have a Gaussian distribution (often a multivariate Gaussian distribution)
@@ -187,13 +168,13 @@ An Intuitive Look}
 \end{frame}
 
 %-------
-\subsubsection{\ \ \ \ \ \ - 1D derivation}
+\subsubsection{1D derivation}
 %-------
-\begin{frame}
+\begin{frame}\pw\Large
 \frametitle{Kalman Filter/Observer/Estimator}
 \framesubtitle{Derivation}
 
-\footnote{\tiny\hspace{-0.23in} \href{http://www.cl.cam.ac.uk/~rmf25/papers/Understanding the Basis of the Kalman Filter.pdf}{Faragher, Ramsey, \emph{Understanding the Basis of the Kalman Filter Via a Simple and Intuitive Derivation}, IEEE Signal Processing Magazine, Sep 2012}}
+\footnotetext{\tiny\hspace{-0.23in} \href{http://www.cl.cam.ac.uk/~rmf25/papers/Understanding the Basis of the Kalman Filter.pdf}{Faragher, Ramsey, \emph{Understanding the Basis of the Kalman Filter Via a Simple and Intuitive Derivation}, IEEE Signal Processing Magazine, Sep 2012}}
 \scriptsize
 \begin{itemize}
 \item The Kalman filter is typically derived using vector algebra as a MMSE (minimum mean squared estimator), an approach suitable for students confident in mathematics but not one that is easy to grasp for students in disciplines that do not require strong mathematics
@@ -201,11 +182,10 @@ An Intuitive Look}
 \end{frame}
 
 
-\begin{frame}
+\begin{frame}\pw\Large
 \frametitle{Kalman Filter/Observer/Estimator}
 \framesubtitle{Derivation \tiny cont.}
-
-\footnote{\tiny\hspace{-0.23in} \href{http://www.cl.cam.ac.uk/~rmf25/papers/Understanding the Basis of the Kalman Filter.pdf}{Faragher, Ramsey, \emph{Understanding the Basis of the Kalman Filter Via a Simple and Intuitive Derivation}, IEEE Signal Processing Magazine, Sep 2012}}
+%\footnotetext{\tiny\hspace{-0.23in} \href{http://www.cl.cam.ac.uk/~rmf25/papers/Understanding the Basis of the Kalman Filter.pdf}{Faragher, Ramsey, \emph{Understanding the Basis of the Kalman Filter Via a Simple and Intuitive Derivation}, IEEE Signal Processing Magazine, Sep 2012}}
 \begin{itemize}\scriptsize
 \item From here on, we focus our attention to a very well written paper on the Kalman filter,   \href{http://www.cl.cam.ac.uk/~rmf25/papers/Understanding the Basis of the Kalman Filter.pdf}{\color{blue} \emph{Understanding the Basis of the Kalman Filter Via a Simple and Intuitive Derivation}} 
 \item This paper provides a simple and intuitive derivation of the Kalman filter with the aim of teaching this useful tool to students from disciplines that do not require a strong mathematical background
@@ -216,11 +196,11 @@ An Intuitive Look}
 
 
 
-\begin{frame}
+\begin{frame}\pw\Large
 \frametitle{Kalman Filter/Observer/Estimator}
 \framesubtitle{1D derivation (same units)}
 
-\footnote{\tiny\hspace{-0.23in} \href{http://www.cl.cam.ac.uk/~rmf25/papers/Understanding the Basis of the Kalman Filter.pdf}{Faragher, Ramsey, \emph{Understanding the Basis of the Kalman Filter Via a Simple and Intuitive Derivation}, IEEE Signal Processing Magazine, Sep 2012}}
+\footnotetext{\tiny\hspace{-0.23in} \href{http://www.cl.cam.ac.uk/~rmf25/papers/Understanding the Basis of the Kalman Filter.pdf}{Faragher, Ramsey, \emph{Understanding the Basis of the Kalman Filter Via a Simple and Intuitive Derivation}, IEEE Signal Processing Magazine, Sep 2012}}
 \begin{itemize}\scriptsize 
 \item In the following slides, we make two assumptions for the derivation:
 \begin{enumerate}\scriptsize 
@@ -244,11 +224,11 @@ An Intuitive Look}
 
 
 
-\begin{frame}
+\begin{frame}\pw\Large
 \frametitle{Kalman Filter/Observer/Estimator}
 \framesubtitle{1D derivation (same units)}
 
-\footnote{\tiny\hspace{-0.23in} \href{http://www.cl.cam.ac.uk/~rmf25/papers/Understanding the Basis of the Kalman Filter.pdf}{Faragher, Ramsey, \emph{Understanding the Basis of the Kalman Filter Via a Simple and Intuitive Derivation}, IEEE Signal Processing Magazine, Sep 2012}}
+\footnotetext{\tiny\hspace{-0.23in} \href{http://www.cl.cam.ac.uk/~rmf25/papers/Understanding the Basis of the Kalman Filter.pdf}{Faragher, Ramsey, \emph{Understanding the Basis of the Kalman Filter Via a Simple and Intuitive Derivation}, IEEE Signal Processing Magazine, Sep 2012}}
 \scriptsize
 We have the following variables in the Kalman filter:
 \begin{table}\scriptsize
@@ -274,11 +254,11 @@ We have the following variables in the Kalman filter:
 
 
 
-\begin{frame}
+\begin{frame}\pw\Large
 \frametitle{Kalman Filter/Observer/Estimator}
 \framesubtitle{1D derivation (same units) \tiny cont.}
 
-\footnote{\tiny\hspace{-0.23in} \href{http://www.cl.cam.ac.uk/~rmf25/papers/Understanding the Basis of the Kalman Filter.pdf}{Faragher, Ramsey, \emph{Understanding the Basis of the Kalman Filter Via a Simple and Intuitive Derivation}, IEEE Signal Processing Magazine, Sep 2012}}
+\footnotetext{\tiny\hspace{-0.23in} \href{http://www.cl.cam.ac.uk/~rmf25/papers/Understanding the Basis of the Kalman Filter.pdf}{Faragher, Ramsey, \emph{Understanding the Basis of the Kalman Filter Via a Simple and Intuitive Derivation}, IEEE Signal Processing Magazine, Sep 2012}}
 \scriptsize 
 Step 1: {\color{red}prediction}\\
 \begin{equation*}
@@ -292,11 +272,11 @@ Step 1: {\color{red}prediction}\\
 
 
 
-\begin{frame}
+\begin{frame}\pw\Large
 \frametitle{Kalman Filter/Observer/Estimator}
 \framesubtitle{1D derivation (same units) \tiny cont.}
 
-\footnote{\tiny\hspace{-0.23in} \href{http://www.cl.cam.ac.uk/~rmf25/papers/Understanding the Basis of the Kalman Filter.pdf}{Faragher, Ramsey, \emph{Understanding the Basis of the Kalman Filter Via a Simple and Intuitive Derivation}, IEEE Signal Processing Magazine, Sep 2012}}
+\footnotetext{\tiny\hspace{-0.23in} \href{http://www.cl.cam.ac.uk/~rmf25/papers/Understanding the Basis of the Kalman Filter.pdf}{Faragher, Ramsey, \emph{Understanding the Basis of the Kalman Filter Via a Simple and Intuitive Derivation}, IEEE Signal Processing Magazine, Sep 2012}}
 \scriptsize 
 Step 2: {\color{red}uncertainty of prediction}
 \begin{equation*}
@@ -320,11 +300,11 @@ e=\dot{x} - \dot{\hat{x}}&=&  (A{\color{Violet}x}+B u+{\color{Aquamarine}w}) - (
 
 
 
-\begin{frame}
+\begin{frame}\pw\Large
 \frametitle{Kalman Filter/Observer/Estimator}
 \framesubtitle{1D derivation (same units) \tiny cont.}
 
-\footnote{\tiny\hspace{-0.23in} \href{http://www.cl.cam.ac.uk/~rmf25/papers/Understanding the Basis of the Kalman Filter.pdf}{Faragher, Ramsey, \emph{Understanding the Basis of the Kalman Filter Via a Simple and Intuitive Derivation}, IEEE Signal Processing Magazine, Sep 2012}}
+\footnotetext{\tiny\hspace{-0.23in} \href{http://www.cl.cam.ac.uk/~rmf25/papers/Understanding the Basis of the Kalman Filter.pdf}{Faragher, Ramsey, \emph{Understanding the Basis of the Kalman Filter Via a Simple and Intuitive Derivation}, IEEE Signal Processing Magazine, Sep 2012}}
 \scriptsize
 Steps 3 and 4: {\color{orange}Kalman gain} and {\color{darkgreen}update}\\
 The mean $\mufused$ of the Gaussian function obtained when \\two Gaussian distributions with mean and variance $\muone$, $\varone$\\ and $\mutwo$, $\vartwo$ respectively are multiplied is given by,
@@ -350,11 +330,11 @@ $\mufused=\muone  + {\color{Orange}k_1}(\mutwo-\muone)$ than to see $\mufused=\m
 
 
 
-\begin{frame}
+\begin{frame}\pw\Large
 \frametitle{Kalman Filter/Observer/Estimator}
 \framesubtitle{1D derivation (same units) \tiny cont.}
 
-\footnote{\tiny\hspace{-0.23in} \href{http://www.cl.cam.ac.uk/~rmf25/papers/Understanding the Basis of the Kalman Filter.pdf}{Faragher, Ramsey, \emph{Understanding the Basis of the Kalman Filter Via a Simple and Intuitive Derivation}, IEEE Signal Processing Magazine, Sep 2012}}
+\footnotetext{\tiny\hspace{-0.23in} \href{http://www.cl.cam.ac.uk/~rmf25/papers/Understanding the Basis of the Kalman Filter.pdf}{Faragher, Ramsey, \emph{Understanding the Basis of the Kalman Filter Via a Simple and Intuitive Derivation}, IEEE Signal Processing Magazine, Sep 2012}}
 \scriptsize
 Step 5: {\color{darkgreen}uncertainty of update}\\
 The variance $\varfused$ of the Gaussian function obtained when\\ two Gaussian distributions with mean and variance $\muone$, $\varone$\\ and $\mutwo$, $\vartwo$ respectively are multiplied is given by,
@@ -379,11 +359,11 @@ where ${\color{Orange}k_1}$ and ${\color{Orange}k_2}$ are the same as defined in
 \end{frame}
 
 
-\begin{frame}
+\begin{frame}\pw\Large
 \frametitle{Kalman Filter/Observer/Estimator}
 \framesubtitle{1D derivation (different units)}
 
-\footnote{\tiny\hspace{-0.23in} \href{http://www.cl.cam.ac.uk/~rmf25/papers/Understanding the Basis of the Kalman Filter.pdf}{Faragher, Ramsey, \emph{Understanding the Basis of the Kalman Filter Via a Simple and Intuitive Derivation}, IEEE Signal Processing Magazine, Sep 2012}}
+\footnotetext{\tiny\hspace{-0.23in} \href{http://www.cl.cam.ac.uk/~rmf25/papers/Understanding the Basis of the Kalman Filter.pdf}{Faragher, Ramsey, \emph{Understanding the Basis of the Kalman Filter Via a Simple and Intuitive Derivation}, IEEE Signal Processing Magazine, Sep 2012}}
 \scriptsize 
 \begin{itemize}\scriptsize
 \item Now, we assume that the units of the prediction \\and fused output are the same while the units of the measurement are different
@@ -395,37 +375,37 @@ where ${\color{Orange}k_1}$ and ${\color{Orange}k_2}$ are the same as defined in
 
 
 
-\begin{frame}
+\begin{frame}\pw\Large
 \frametitle{Kalman Filter/Observer/Estimator}
 \framesubtitle{1D derivation (different units) \tiny cont.}
 
-\footnote{\tiny\hspace{-0.23in} \href{http://www.cl.cam.ac.uk/~rmf25/papers/Understanding the Basis of the Kalman Filter.pdf}{Faragher, Ramsey, \emph{Understanding the Basis of the Kalman Filter Via a Simple and Intuitive Derivation}, IEEE Signal Processing Magazine, Sep 2012}}
+\footnotetext{\tiny\hspace{-0.23in} \href{http://www.cl.cam.ac.uk/~rmf25/papers/Understanding the Basis of the Kalman Filter.pdf}{Faragher, Ramsey, \emph{Understanding the Basis of the Kalman Filter Via a Simple and Intuitive Derivation}, IEEE Signal Processing Magazine, Sep 2012}}
 \scriptsize 
 Step 1: {\color{red}prediction}\\
 Same as before
 \end{frame}
 
 
-\begin{frame}
+\begin{frame}\pw\Large
 \frametitle{Kalman Filter/Observer/Estimator}
 \framesubtitle{1D derivation (different units) \tiny cont.}
 
-\footnote{\tiny\hspace{-0.23in} \href{http://www.cl.cam.ac.uk/~rmf25/papers/Understanding the Basis of the Kalman Filter.pdf}{Faragher, Ramsey, \emph{Understanding the Basis of the Kalman Filter Via a Simple and Intuitive Derivation}, IEEE Signal Processing Magazine, Sep 2012}}
+\footnotetext{\tiny\hspace{-0.23in} \href{http://www.cl.cam.ac.uk/~rmf25/papers/Understanding the Basis of the Kalman Filter.pdf}{Faragher, Ramsey, \emph{Understanding the Basis of the Kalman Filter Via a Simple and Intuitive Derivation}, IEEE Signal Processing Magazine, Sep 2012}}
 \scriptsize 
 Step 2: {\color{red}uncertainty of prediction}\\
 Same as before
 \end{frame}
 
 
-\begin{frame}
+\begin{frame}\pw\Large
 \frametitle{Kalman Filter/Observer/Estimator}
 \framesubtitle{1D derivation (different units) \tiny cont.}
 
 \scriptsize
-\footnote{\tiny\hspace{-0.23in} \href{http://www.cl.cam.ac.uk/~rmf25/papers/Understanding the Basis of the Kalman Filter.pdf}{Faragher, Ramsey, \emph{Understanding the Basis of the Kalman Filter Via a Simple and Intuitive Derivation}, IEEE Signal Processing Magazine, Sep 2012}}\scriptsize
+\footnotetext{\tiny\hspace{-0.23in} \href{http://www.cl.cam.ac.uk/~rmf25/papers/Understanding the Basis of the Kalman Filter.pdf}{Faragher, Ramsey, \emph{Understanding the Basis of the Kalman Filter Via a Simple and Intuitive Derivation}, IEEE Signal Processing Magazine, Sep 2012}}\scriptsize
 Steps 3 and 4: {\color{orange}Kalman gain} and {\color{darkgreen}update}\\
 We convert the prediction and fused output units to measurement units as follows,
-\begin{changemargin}{-0.25in}{0in}
+
 \begin{equation*}
 \begin{array}{rlllllll}
 C\mufused &= \frac { C\muone \vartwo + \mutwo C^2\varone }{C^2\varone + \vartwo}\\\\
@@ -433,7 +413,7 @@ C\mufused &= \frac { C\muone \vartwo + \mutwo C^2\varone }{C^2\varone + \vartwo}
 &=\muone + \frac{\varone(C\mutwo-C^2\muone)}{C^2\varone + \vartwo}=\muone + \frac{C\varone(\mutwo-C\muone)}{C^2\varone + \vartwo} =\muone  + {\color{Orange}K}(\mutwo-C\muone)
 \end{array}
 \end{equation*}
-\end{changemargin}
+
 where ${\color{Orange}K}=\frac{C\varone}{C^2\varone + \vartwo}$
 \begin{itemize}\scriptsize
 %\item Notice that ${\color{Orange}K}$ is always a positive fraction
@@ -444,11 +424,11 @@ where ${\color{Orange}K}=\frac{C\varone}{C^2\varone + \vartwo}$
 
 
 
-\begin{frame}
+\begin{frame}\pw\Large
 \frametitle{Kalman Filter/Observer/Estimator}
 \framesubtitle{1D derivation (different units) \tiny cont.}
 
-\footnote{\tiny\hspace{-0.23in} \href{http://www.cl.cam.ac.uk/~rmf25/papers/Understanding the Basis of the Kalman Filter.pdf}{Faragher, Ramsey, \emph{Understanding the Basis of the Kalman Filter Via a Simple and Intuitive Derivation}, IEEE Signal Processing Magazine, Sep 2012}}
+\footnotetext{\tiny\hspace{-0.23in} \href{http://www.cl.cam.ac.uk/~rmf25/papers/Understanding the Basis of the Kalman Filter.pdf}{Faragher, Ramsey, \emph{Understanding the Basis of the Kalman Filter Via a Simple and Intuitive Derivation}, IEEE Signal Processing Magazine, Sep 2012}}
 \scriptsize
 Step 5: {\color{darkgreen}uncertainty of update}\\
 We convert the prediction and fused output units to measurement units as follows,
@@ -470,16 +450,16 @@ where ${\color{Orange}K}$ is the Kalman gain as defined in the previous slide
 
 
 
-\begin{frame}[plain]
+\begin{frame}[plain]\pw\Large
 \frametitle{Kalman Filter/Observer/Estimator}
 \framesubtitle{1D derivation (different units) \tiny cont.}
 
-\footnote{\tiny\hspace{-0.23in} \href{http://www.cl.cam.ac.uk/~rmf25/papers/Understanding the Basis of the Kalman Filter.pdf}{Faragher, Ramsey, \emph{Understanding the Basis of the Kalman Filter Via a Simple and Intuitive Derivation}, IEEE Signal Processing Magazine, Sep 2012}}
+\footnotetext{\tiny\hspace{-0.23in} \href{http://www.cl.cam.ac.uk/~rmf25/papers/Understanding the Basis of the Kalman Filter.pdf}{Faragher, Ramsey, \emph{Understanding the Basis of the Kalman Filter Via a Simple and Intuitive Derivation}, IEEE Signal Processing Magazine, Sep 2012}}
 \scriptsize
 So, in summary, the equations are:
-%\footnote{\tiny\hspace{-0.23in} \hspace{-0.24in}- \href{http://en.wikipedia.org/wiki/Kalman_filter}{http://en.wikipedia.org/wiki/Kalman\_filter}\\
+%\footnotetext{\tiny\hspace{-0.23in} \hspace{-0.24in}- \href{http://en.wikipedia.org/wiki/Kalman_filter}{http://en.wikipedia.org/wiki/Kalman\_filter}\\
 %- \href{http://blog.jafma.net/2010/11/09/the-product-of-two-Gaussian-pdfs-is-not-a-pdf-but-is-Gaussian-a-k-a-loving-algebra/}{http://blog.jafma.net/2010/11/09/the-product-of-two-Gaussian-pdfs-is-not-a-pdf-but-is-Gaussian-a-k-a-loving-algebra/}}
-\begin{changemargin}{-1.4in}{0in}
+
 \begin{figure}[h]
 \centering
 \includegraphics[width=0.9\textwidth]{figs/TRK_KalmanFilter_equations-1D.pdf}
@@ -489,12 +469,12 @@ So, in summary, the equations are:
 \item The measurement (observation) is ${\color{blue}\mu_2}$ and its variance is ${\color{blue}\sigma^2_2}$
 \item The prediction and measurement are combined using the Kalman gain $K$ (should be called $L$ but we've used $K$ since all books call it $K$) to get the updated state ${\color{darkgreen}\mu_{fused}}$ and its variance ${\color{darkgreen}\sigma^2_{fused}}$
 \end{itemize}
-\end{changemargin}
+
 \end{frame}
 
 
 
-\begin{frame}
+\begin{frame}\pw\Large
 \frametitle{Kalman Filter/Observer/Estimator}
 \framesubtitle{1D derivation (different units) \tiny cont.}
 
@@ -518,16 +498,16 @@ K&=\frac{C\sigma_1^2}{C^2\sigma_1^2+\sigma_2^2}\\
 
 
 %-------
-\subsubsection{\ \ \ \ \ \ - 1D example}
+\subsubsection{1D example}
 %-------
 
-\begin{frame}[plain]
+\begin{frame}[plain]\pw\Large
 \frametitle{Kalman Filter/Observer/Estimator}
 \framesubtitle{1D example}
 
-\footnote{\tiny\hspace{-0.23in} \href{http://www.cl.cam.ac.uk/~rmf25/papers/Understanding the Basis of the Kalman Filter.pdf}{Faragher, Ramsey, \emph{Understanding the Basis of the Kalman Filter Via a Simple and Intuitive Derivation}, IEEE Signal Processing Magazine, Sep 2012}}
+\footnotetext{\tiny\hspace{-0.23in} \href{http://www.cl.cam.ac.uk/~rmf25/papers/Understanding the Basis of the Kalman Filter.pdf}{Faragher, Ramsey, \emph{Understanding the Basis of the Kalman Filter Via a Simple and Intuitive Derivation}, IEEE Signal Processing Magazine, Sep 2012}}
 \scriptsize
-\begin{changemargin}{-1.3in}{0in}
+
 \begin{itemize}\scriptsize
 \item \textbf{Introduction}
 \begin{itemize}\scriptsize
@@ -551,7 +531,7 @@ K&=\frac{C\sigma_1^2}{C^2\sigma_1^2+\sigma_2^2}\\
 %\end{bmatrix}
 %\end{equation*}
 \end{itemize}
-\end{changemargin}
+
 \end{frame}
 
 
@@ -572,13 +552,13 @@ K&=\frac{C\sigma_1^2}{C^2\sigma_1^2+\sigma_2^2}\\
 \section{We Are Wiser}
 %#####
 
-\begin{frame}[plain]
+\begin{frame}[plain]\pw\Large
 \frametitle{Kalman Filter/Observer/Estimator}
 \framesubtitle{1D example \tiny cont.}
 
-\footnote{\tiny\hspace{-0.23in} \href{http://www.cl.cam.ac.uk/~rmf25/papers/Understanding the Basis of the Kalman Filter.pdf}{Faragher, Ramsey, \emph{Understanding the Basis of the Kalman Filter Via a Simple and Intuitive Derivation}, IEEE Signal Processing Magazine, Sep 2012}}
+\footnotetext{\tiny\hspace{-0.23in} \href{http://www.cl.cam.ac.uk/~rmf25/papers/Understanding the Basis of the Kalman Filter.pdf}{Faragher, Ramsey, \emph{Understanding the Basis of the Kalman Filter Via a Simple and Intuitive Derivation}, IEEE Signal Processing Magazine, Sep 2012}}
 \scriptsize
-\begin{changemargin}{-1.3in}{0in}
+
 \begin{enumerate}\scriptsize
 \item \textbf{Input}: The train driver may apply a \emph{braking} or \emph{accelerating} input to the train
 \item \textbf{Plant (System)}: Since we have only one state, position of the train along the x axis, we use a single state model, $x[k]=Ax[k-1]+Bu[k-1]$
@@ -593,7 +573,7 @@ K&=\frac{C\sigma_1^2}{C^2\sigma_1^2+\sigma_2^2}\\
 \centering
 \includegraphics[width=1.35\textwidth]{figs/2012_MAG_Understanding_the_Basis_of_the_Kalman_Filter_fig1.pdf}
 \end{figure}
-\end{changemargin}
+
 \end{frame}
 
 
@@ -604,7 +584,7 @@ K&=\frac{C\sigma_1^2}{C^2\sigma_1^2+\sigma_2^2}\\
 
 
 
-%\begin{frame}
+%\begin{frame}\pw\Large
 %\frametitle{Kalman Filter/Observer/Estimator}
 %\framesubtitle{An Observer (Estimator): The Kalman Filter}
 %
@@ -625,13 +605,13 @@ K&=\frac{C\sigma_1^2}{C^2\sigma_1^2+\sigma_2^2}\\
 
 
 
-\begin{frame}[plain]
+\begin{frame}[plain]\pw\Large
 \frametitle{Kalman Filter/Observer/Estimator}
 \framesubtitle{1D example \tiny cont.}
 
-\footnote{\tiny\hspace{-0.23in} \href{http://www.cl.cam.ac.uk/~rmf25/papers/Understanding the Basis of the Kalman Filter.pdf}{Faragher, Ramsey, \emph{Understanding the Basis of the Kalman Filter Via a Simple and Intuitive Derivation}, IEEE Signal Processing Magazine, Sep 2012}}
+\footnotetext{\tiny\hspace{-0.23in} \href{http://www.cl.cam.ac.uk/~rmf25/papers/Understanding the Basis of the Kalman Filter.pdf}{Faragher, Ramsey, \emph{Understanding the Basis of the Kalman Filter Via a Simple and Intuitive Derivation}, IEEE Signal Processing Magazine, Sep 2012}}
 \scriptsize
-\begin{changemargin}{-1.3in}{0in}
+
 \underline{\textbf{Initialization}}
 \begin{itemize}\scriptsize
 \item At some initial time, we have some idea of where the train is
@@ -644,17 +624,17 @@ K&=\frac{C\sigma_1^2}{C^2\sigma_1^2+\sigma_2^2}\\
 \centering
 \includegraphics[width=1.35\textwidth]{figs/2012_MAG_Understanding_the_Basis_of_the_Kalman_Filter_fig2_mine.pdf}
 \end{figure}
-\end{changemargin}
+
 \end{frame}
 
 
-\begin{frame}[plain]
+\begin{frame}[plain]\pw\Large
 \frametitle{Kalman Filter/Observer/Estimator}
 \framesubtitle{1D example \tiny cont.}
 
-\footnote{\tiny\hspace{-0.23in} \href{http://www.cl.cam.ac.uk/~rmf25/papers/Understanding the Basis of the Kalman Filter.pdf}{Faragher, Ramsey, \emph{Understanding the Basis of the Kalman Filter Via a Simple and Intuitive Derivation}, IEEE Signal Processing Magazine, Sep 2012}}
+\footnotetext{\tiny\hspace{-0.23in} \href{http://www.cl.cam.ac.uk/~rmf25/papers/Understanding the Basis of the Kalman Filter.pdf}{Faragher, Ramsey, \emph{Understanding the Basis of the Kalman Filter Via a Simple and Intuitive Derivation}, IEEE Signal Processing Magazine, Sep 2012}}
 \scriptsize
-\begin{changemargin}{-1.3in}{0in}
+
 \underline{\textbf{Step 1 of the Kalman Filter: prediction}}
 \begin{itemize}\scriptsize
 \item Now, we will predict the new position of the train
@@ -665,17 +645,17 @@ K&=\frac{C\sigma_1^2}{C^2\sigma_1^2+\sigma_2^2}\\
 \centering
 \includegraphics[width=1.35\textwidth]{figs/2012_MAG_Understanding_the_Basis_of_the_Kalman_Filter_fig3.pdf}
 \end{figure}
-\end{changemargin}
+
 \end{frame}
 
 
-\begin{frame}[plain]
+\begin{frame}[plain]\pw\Large
 \frametitle{Kalman Filter/Observer/Estimator}
 \framesubtitle{1D example \tiny cont.}
 
-\footnote{\tiny\hspace{-0.23in} \href{http://www.cl.cam.ac.uk/~rmf25/papers/Understanding the Basis of the Kalman Filter.pdf}{Faragher, Ramsey, \emph{Understanding the Basis of the Kalman Filter Via a Simple and Intuitive Derivation}, IEEE Signal Processing Magazine, Sep 2012}}
+\footnotetext{\tiny\hspace{-0.23in} \href{http://www.cl.cam.ac.uk/~rmf25/papers/Understanding the Basis of the Kalman Filter.pdf}{Faragher, Ramsey, \emph{Understanding the Basis of the Kalman Filter Via a Simple and Intuitive Derivation}, IEEE Signal Processing Magazine, Sep 2012}}
 \scriptsize
-\begin{changemargin}{-1.3in}{0in}
+
 \underline{\textbf{Intermediate step: measurement arrives}}
 \begin{itemize}\scriptsize
 \item Now, we get a measurement from the radio ranging system, which is also noisy
@@ -687,17 +667,17 @@ K&=\frac{C\sigma_1^2}{C^2\sigma_1^2+\sigma_2^2}\\
 \centering
 \includegraphics[width=1.35\textwidth]{figs/2012_MAG_Understanding_the_Basis_of_the_Kalman_Filter_fig4.pdf}
 \end{figure}
-\end{changemargin}
+
 \end{frame}
 
 
-\begin{frame}[plain]
+\begin{frame}[plain]\pw\Large
 \frametitle{Kalman Filter/Observer/Estimator}
 \framesubtitle{1D example \tiny cont.}
 
-\footnote{\tiny\hspace{-0.23in} \href{http://www.cl.cam.ac.uk/~rmf25/papers/Understanding the Basis of the Kalman Filter.pdf}{Faragher, Ramsey, \emph{Understanding the Basis of the Kalman Filter Via a Simple and Intuitive Derivation}, IEEE Signal Processing Magazine, Sep 2012}}
+\footnotetext{\tiny\hspace{-0.23in} \href{http://www.cl.cam.ac.uk/~rmf25/papers/Understanding the Basis of the Kalman Filter.pdf}{Faragher, Ramsey, \emph{Understanding the Basis of the Kalman Filter Via a Simple and Intuitive Derivation}, IEEE Signal Processing Magazine, Sep 2012}}
 \scriptsize
-\begin{changemargin}{-1.3in}{0in}
+
 \underline{\textbf{Step 2 of the Kalman Filter: update}}
 \begin{itemize}\scriptsize
 \item We combine the prediction Gaussian (red) with the measurement Gaussian (blue) by multiplying them
@@ -710,11 +690,11 @@ K&=\frac{C\sigma_1^2}{C^2\sigma_1^2+\sigma_2^2}\\
 \centering
 \includegraphics[width=1.35\textwidth]{figs/2012_MAG_Understanding_the_Basis_of_the_Kalman_Filter_fig5.pdf}
 \end{figure}
-\end{changemargin}
+
 \end{frame}
 
 
-\begin{frame}[fragile]
+\begin{frame}[fragile]\pw\Large
 \frametitle{Kalman Filter/Observer/Estimator}
 \framesubtitle{1D example \tiny cont.}
 
@@ -779,7 +759,7 @@ title('Data fusion using the Kalman Filter')
 
 
 
-\begin{frame}
+\begin{frame}\pw\Large
 \frametitle{Kalman Filter/Observer/Estimator}
 \framesubtitle{1D example \tiny cont.}
 
@@ -797,14 +777,14 @@ title('Data fusion using the Kalman Filter')
 
 
 %-------
-\subsubsection{\ \ \ \ \ \ - Multiple-D derivation}
+\subsubsection{Multiple-D derivation}
 %-------
-\begin{frame}[plain]
+\begin{frame}[plain]\pw\Large
 \frametitle{Kalman Filter/Observer/Estimator}
 \framesubtitle{Multiple-D derivation}
 
-\footnote{\tiny\hspace{-0.23in} \hspace{-0.24in} \href{http://en.wikipedia.org/wiki/Kalman_filter}{http://en.wikipedia.org/wiki/Kalman\_filter}}
-\begin{changemargin}{-1.4in}{0in}
+\footnotetext{\tiny\hspace{-0.23in} \hspace{-0.24in} \href{http://en.wikipedia.org/wiki/Kalman_filter}{http://en.wikipedia.org/wiki/Kalman\_filter}}
+
 \begin{itemize}\scriptsize
 \item Now, let's take a look at the Kalman Filter when more than one state is involved
 \item Notice the one-to-one correspondence between equations in 1D (i.e. one state) and multiple states
@@ -813,20 +793,20 @@ title('Data fusion using the Kalman Filter')
 \centering
 \includegraphics[width=1.4\textwidth]{figs/TRK_KalmanFilter_equations-2D.pdf}
 \end{figure}
-\end{changemargin}
+
 \end{frame}
 
 
 %-------
-\subsubsection{\ \ \ \ \ \ - 2D example}
+\subsubsection{2D example}
 %-------
 
 
-\begin{frame}[plain]
+\begin{frame}[plain]\pw\Large
 \frametitle{Kalman Filter/Observer/Estimator}
 \framesubtitle{2D example}
 
-\begin{changemargin}{-1.4in}{0in}
+
 \scriptsize
 \begin{itemize}
 \item In the single state example, we used the Kalman filter to fuse, i.e., combine two\\ pieces of information: first, our prediction of the position of a train, and second,\\ the measurement of the train's position obtained from a radio ranging system.  The result of our fusion was an estimate of the train's position.
@@ -838,12 +818,12 @@ title('Data fusion using the Kalman Filter')
 \centering
 \includegraphics[width=1.4\textwidth]{figs/TRK_KalmanFilter_example.pdf}
 \end{figure}
-\end{changemargin}
+
 \end{frame}
 
 
 
-\begin{frame}[fragile]
+\begin{frame}[fragile]\pw\Large
 \frametitle{Kalman Filter/Observer/Estimator}
 \framesubtitle{2D example \tiny cont.}
 
@@ -899,7 +879,7 @@ iter_fusedP     =   [];
 
 
 
-\begin{frame}[fragile]
+\begin{frame}[fragile]\pw\Large
 \frametitle{Kalman Filter/Observer/Estimator}
 \framesubtitle{2D example \tiny cont.}
 
@@ -948,7 +928,7 @@ sprintf('The MSE for fused estimate : %.2f',norm((iter_real-iter_fusedx), 2))
 
 
 
-\begin{frame}[fragile]
+\begin{frame}[fragile]\pw\Large
 \frametitle{Kalman Filter/Observer/Estimator}
 \framesubtitle{2D example \tiny cont.}
 
@@ -984,10 +964,9 @@ legend('predicted', 'measured', 'fused', 'reality');
 
 
 
-\begin{frame}
+\begin{frame}\pw\Large
 \frametitle{Kalman Filter/Observer/Estimator}
 \framesubtitle{2D example \tiny cont.}
-
 \scriptsize The code on the previous slide produces this output:
 \scriptsize
 \begin{figure}[h]
@@ -1003,15 +982,15 @@ The advantage of the Kalman filter is that the fused estimate it produces has le
 
 
 %-------
-\subsubsection{\ \ \ \ \ \ - Proof}
+\subsubsection{Proof}
 %-------
-\begin{frame}
+\begin{frame}\pw\Large
 \frametitle{Kalman Filter/Observer/Estimator}
 \framesubtitle{Product of Gaussian distributions is a Gaussian function}
 
-\footnote{\tiny\hspace{-0.23in} \hspace{-0.25in}
+\footnotetext{\tiny\hspace{-0.23in} \hspace{-0.25in}
 \href{http://blog.jafma.net/2010/11/09/the-product-of-two-Gaussian-pdfs-is-not-a-pdf-but-is-Gaussian-a-k-a-loving-algebra/}{http://blog.jafma.net/2010/11/09/the-product-of-two-Gaussian-pdfs-is-not-a-pdf-but-is-Gaussian-a-k-a-loving-algebra/}}
-%\begin{changemargin}{-1.35in}{0in}
+
 %\begin{figure}
 %\centering
 %\includegraphics[width=1.3\textwidth]{figs/BOOK_Dorf_Eg_13_3.pdf}
@@ -1027,19 +1006,19 @@ p_2(x; \mutwo, \stwo)&=\frac{1}{\sqrt{2 \pi \vartwo}} e^{-\frac{(x-\mutwo)^2}{2 
 p_1p_2 &=     \frac{1}{\sqrt{2 \pi \varone}} e^{-\frac{(x-\muone)^2}{2 \varone}}    \frac{1}{\sqrt{2 \pi \vartwo}} e^{-\frac{(x-\mutwo)^2}{2 \vartwo}}\\\\
 \end{array}
 \end{equation*}
-%\end{changemargin}
+%
 \end{frame}
 
 
 
 
-\begin{frame}
+\begin{frame}\pw\Large
 \frametitle{Kalman Filter/Observer/Estimator}
 \framesubtitle{Product of Gaussian distributions is a Gaussian function}
 
-\footnote{\tiny\hspace{-0.23in} \hspace{-0.25in}
+\footnotetext{\tiny\hspace{-0.23in} \hspace{-0.25in}
 \href{http://blog.jafma.net/2010/11/09/the-product-of-two-Gaussian-pdfs-is-not-a-pdf-but-is-Gaussian-a-k-a-loving-algebra/}{http://blog.jafma.net/2010/11/09/the-product-of-two-Gaussian-pdfs-is-not-a-pdf-but-is-Gaussian-a-k-a-loving-algebra/}}
-%\begin{changemargin}{-1.35in}{0in}
+
 %\begin{figure}
 %\centering
 %\includegraphics[width=1.3\textwidth]{figs/BOOK_Dorf_Eg_13_3.pdf}
@@ -1059,7 +1038,7 @@ p_1p_2 &=     \frac{1}{\sqrt{2 \pi \varone}} e^{-\frac{(x-\muone)^2}{2 \varone}}
 
 \end{array}
 \end{equation*}
-%\end{changemargin}
+%
 \end{frame}
 
 
@@ -1067,13 +1046,13 @@ p_1p_2 &=     \frac{1}{\sqrt{2 \pi \varone}} e^{-\frac{(x-\muone)^2}{2 \varone}}
 
 
 
-\begin{frame}
+\begin{frame}\pw\Large
 \frametitle{Kalman Filter/Observer/Estimator}
 \framesubtitle{Product of Gaussian distributions is a Gaussian function}
 
-\footnote{\tiny\hspace{-0.23in} \hspace{-0.25in}
+\footnotetext{\tiny\hspace{-0.23in} \hspace{-0.25in}
 \href{http://blog.jafma.net/2010/11/09/the-product-of-two-Gaussian-pdfs-is-not-a-pdf-but-is-Gaussian-a-k-a-loving-algebra/}{http://blog.jafma.net/2010/11/09/the-product-of-two-Gaussian-pdfs-is-not-a-pdf-but-is-Gaussian-a-k-a-loving-algebra/}}
-%\begin{changemargin}{-1.35in}{0in}
+
 %\begin{figure}
 %\centering
 %\includegraphics[width=1.3\textwidth]{figs/BOOK_Dorf_Eg_13_3.pdf}
@@ -1096,20 +1075,20 @@ p_1 p_2 &=    \frac{1}{\sqrt{2 \pi \frac { \varone \vartwo }{\varone + \vartwo} 
 &=\frac{1}{\sqrt{2 \pi \frac { \varone \vartwo }{\varone + \vartwo} }}     e^{ \ln { \frac{1}{\sqrt{2 \pi ( \varone + \vartwo ) }} }  }        e^{ \xx}\\
 \end{array}
 \end{equation*}
-%\end{changemargin}
+%
 \end{frame}
 
 
 
 
 
-\begin{frame}
+\begin{frame}\pw\Large
 \frametitle{Kalman Filter/Observer/Estimator}
 \framesubtitle{Product of Gaussian distributions is a Gaussian function}
 
-\footnote{\tiny\hspace{-0.23in} \hspace{-0.25in}
+\footnotetext{\tiny\hspace{-0.23in} \hspace{-0.25in}
 \href{http://blog.jafma.net/2010/11/09/the-product-of-two-Gaussian-pdfs-is-not-a-pdf-but-is-Gaussian-a-k-a-loving-algebra/}{http://blog.jafma.net/2010/11/09/the-product-of-two-Gaussian-pdfs-is-not-a-pdf-but-is-Gaussian-a-k-a-loving-algebra/}}
-%\begin{changemargin}{-1.35in}{0in}
+
 %\begin{figure}
 %\centering
 %\includegraphics[width=1.3\textwidth]{figs/BOOK_Dorf_Eg_13_3.pdf}
@@ -1130,7 +1109,7 @@ p_1 p_2 &=    \frac{1}{\sqrt{2 \pi \frac { \varone \vartwo }{\varone + \vartwo} 
 &\frac        { - {\color{darkgreen}( \frac { \varone \vartwo }{\varone + \vartwo})} \myalpha              - {\color{darkgreen}\frac { \vartwo }{\varsum} (x-\muone)^2 - \frac{ \varone }{\varsum} (x-\mutwo)^2          }}          {             {\color{darkgreen}2 \frac { \varprod }{\varsum}}} 
 \end{array}
 \end{equation*}
-%\end{changemargin}
+%
 \end{frame}
 
 
@@ -1139,13 +1118,13 @@ p_1 p_2 &=    \frac{1}{\sqrt{2 \pi \frac { \varone \vartwo }{\varone + \vartwo} 
 
 
 
-\begin{frame}[plain]
+\begin{frame}[plain]\pw\Large
 \frametitle{Kalman Filter/Observer/Estimator}
 \framesubtitle{Product of Gaussian distributions is a Gaussian function}
 
-\footnote{\tiny\hspace{-0.23in} \hspace{-0.25in}
+\footnotetext{\tiny\hspace{-0.23in} \hspace{-0.25in}
 \href{http://blog.jafma.net/2010/11/09/the-product-of-two-Gaussian-pdfs-is-not-a-pdf-but-is-Gaussian-a-k-a-loving-algebra/}{http://blog.jafma.net/2010/11/09/the-product-of-two-Gaussian-pdfs-is-not-a-pdf-but-is-Gaussian-a-k-a-loving-algebra/}}
-\begin{changemargin}{-1.5in}{0in}
+
 %\begin{figure}
 %\centering
 %\includegraphics[width=1.3\textwidth]{figs/BOOK_Dorf_Eg_13_3.pdf}
@@ -1167,18 +1146,18 @@ p_1 p_2 &=    \frac{1}{\sqrt{2 \pi \frac { \varone \vartwo }{\varone + \vartwo} 
 &=\frac{-(x-A)^2-C}{ \divvarprodvarsum}\\
 \end{array}
 \end{equation*}
-\end{changemargin}
+
 \end{frame}
 
 
 
-\begin{frame}[plain]
+\begin{frame}[plain]\pw\Large
 \frametitle{Kalman Filter/Observer/Estimator}
 \framesubtitle{Product of Gaussian distributions is a Gaussian function}
 
-\footnote{\tiny\hspace{-0.23in} \hspace{-0.25in}
+\footnotetext{\tiny\hspace{-0.23in} \hspace{-0.25in}
 \href{http://blog.jafma.net/2010/11/09/the-product-of-two-Gaussian-pdfs-is-not-a-pdf-but-is-Gaussian-a-k-a-loving-algebra/}{http://blog.jafma.net/2010/11/09/the-product-of-two-Gaussian-pdfs-is-not-a-pdf-but-is-Gaussian-a-k-a-loving-algebra/}}
-\begin{changemargin}{-1.35in}{0in}
+
 \scriptsize
 %A polynomial of the form $-x^2+2Ax-(A^2+C)$ turns out to be equivalent to \\$-(x-A)^2-C$, which is the form of the exponent of an unidimensional Gaussian pdf plus a constant term. Casually, we had in the above expresion that polynomial if we do:
 %
@@ -1198,19 +1177,19 @@ C&=\frac {  {\color{darkgreen}{\muone}^2 \vartwo + {\mutwo}^2 \varone + \varone 
 &=\frac { \varone \vartwo }{ (\varone + \vartwo)^2 } ({\muone} - {\mutwo} )^2+\frac { \varone \vartwo }{ \varone + \vartwo } \myalpha )\\
 \end{array}
 \end{equation*}
-\end{changemargin}
+
 \end{frame}
 
 
 
 
-\begin{frame}[plain]
+\begin{frame}[plain]\pw\Large
 \frametitle{Kalman Filter/Observer/Estimator}
 \framesubtitle{Product of Gaussian distributions is a Gaussian function}
 
-\footnote{\tiny\hspace{-0.23in} \hspace{-0.25in}
+\footnotetext{\tiny\hspace{-0.23in} \hspace{-0.25in}
 \href{http://blog.jafma.net/2010/11/09/the-product-of-two-Gaussian-pdfs-is-not-a-pdf-but-is-Gaussian-a-k-a-loving-algebra/}{http://blog.jafma.net/2010/11/09/the-product-of-two-Gaussian-pdfs-is-not-a-pdf-but-is-Gaussian-a-k-a-loving-algebra/}}
-\begin{changemargin}{-1.35in}{0in}
+
 \scriptsize
 Ook. We have already values for $A$ and $C$. Using those letters, the resulting product of the two Gaussian pdfs has become:
 \begin{equation*}
@@ -1219,19 +1198,19 @@ p_1p_2&=    \frac{1}{\sqrt{2 \pi \frac { \varone \vartwo }{\varone + \vartwo} }}
 &=    \frac{1}{\sqrt{2 \pi \frac { \varone \vartwo }{\varone + \vartwo} }}    e^{ \frac{-(x-A)^2}{2 \frac{\varone \vartwo}{\varone + \vartwo}} }   e^{- \frac {C}{2 \frac{\varone \vartwo}{\varone + \vartwo}} }
 \end{array}
 \end{equation*}
-\end{changemargin}
+
 \end{frame}
 
 
 
 
-\begin{frame}[plain]
+\begin{frame}[plain]\pw\Large
 \frametitle{Kalman Filter/Observer/Estimator}
 \framesubtitle{Product of Gaussian distributions is a Gaussian function}
 
-\footnote{\tiny\hspace{-0.23in} \hspace{-0.25in}
+\footnotetext{\tiny\hspace{-0.23in} \hspace{-0.25in}
 \href{http://blog.jafma.net/2010/11/09/the-product-of-two-Gaussian-pdfs-is-not-a-pdf-but-is-Gaussian-a-k-a-loving-algebra/}{http://blog.jafma.net/2010/11/09/the-product-of-two-Gaussian-pdfs-is-not-a-pdf-but-is-Gaussian-a-k-a-loving-algebra/}}
-\begin{changemargin}{-1.35in}{0in}
+
 \scriptsize
 Notice that the first factor and the first exponential are a Gaussian pdf. The whole result, however, is just a Gaussian function, unless the second exponential equals 1…
 
@@ -1244,20 +1223,20 @@ e^{- \frac {C}{2 \frac{\varone \vartwo}{\varone + \vartwo}} }&=   e^{- \frac { \
 &= \frac {1}{ \sqrt{2 \pi (\varone + \vartwo)} }   e^{- \frac { ({\muone} - {\mutwo} )^2 }{ 2(\varone + \vartwo) } }
 \end{array}
 \end{equation*}
-\end{changemargin}
+
 \end{frame}
 
 
 
 
 
-\begin{frame}[plain]
+\begin{frame}[plain]\pw\Large
 \frametitle{Kalman Filter/Observer/Estimator}
 \framesubtitle{Product of Gaussian distributions is a Gaussian function}
 
-\footnote{\tiny\hspace{-0.23in} \hspace{-0.25in}
+\footnotetext{\tiny\hspace{-0.23in} \hspace{-0.25in}
 \href{http://blog.jafma.net/2010/11/09/the-product-of-two-Gaussian-pdfs-is-not-a-pdf-but-is-Gaussian-a-k-a-loving-algebra/}{http://blog.jafma.net/2010/11/09/the-product-of-two-Gaussian-pdfs-is-not-a-pdf-but-is-Gaussian-a-k-a-loving-algebra/}}
-\begin{changemargin}{-1.35in}{0in}
+
 \scriptsize
 Surprisingly, this last expression is a Gaussian pdf if we consider $\muone$ a variable, i.e., $p(\muone; \mutwo, \sqrt{(\varone+\vartwo)})$ (we can also consider $\mutwo$ the variable). But what we are interested in is knowing under which conditions this expression equals 1, and, thus, the product of our original pdfs $p_1$ and $p_2$ is actually a Gaussian pdf:
 \begin{equation*}
@@ -1267,19 +1246,18 @@ Surprisingly, this last expression is a Gaussian pdf if we consider $\muone$ a v
 -  ({\muone} - {\mutwo} )^2    = (\varone + \vartwo) \ln ( 2 \pi (\varone + \vartwo) ) 
 \end{array}
 \end{equation*}
-\end{changemargin}
+
 \end{frame}
 
 
 
 
-\begin{frame}[plain]
+\begin{frame}[plain]\pw\Large
 \frametitle{Kalman Filter/Observer/Estimator}
 \framesubtitle{Product of Gaussian distributions is a Gaussian function}
 
-\footnote{\tiny\hspace{-0.23in} \hspace{-0.25in}
+\footnotetext{\tiny\hspace{-0.23in} \hspace{-0.25in}
 \href{http://blog.jafma.net/2010/11/09/the-product-of-two-Gaussian-pdfs-is-not-a-pdf-but-is-Gaussian-a-k-a-loving-algebra/}{http://blog.jafma.net/2010/11/09/the-product-of-two-Gaussian-pdfs-is-not-a-pdf-but-is-Gaussian-a-k-a-loving-algebra/}}
-\begin{changemargin}{-1.35in}{0in}
 \scriptsize
 Since ${ {\sigma_{1}}^{2} + {\sigma_{2}}^{2} }$ is greater than zero, and the expectations are independent from the variances, we will always find cases (infinite cases, actually) in which the equality does not hold. Thus, we will find infinite cases where the product of two Gaussian pdfs is a Gaussian function but not a Gaussian pdf.
 
@@ -1290,7 +1268,7 @@ A &= \frac { \muone \vartwo + \mutwo \varone }{ \varone + \vartwo}\\\\
 {\sigma_{1 x 2}}^2 &= \frac{\varone \vartwo}{\varone + \vartwo}
 \end{array}
 \end{equation*}
-\end{changemargin}
+
 \end{frame}
 
 
@@ -1300,11 +1278,11 @@ A &= \frac { \muone \vartwo + \mutwo \varone }{ \varone + \vartwo}\\\\
 
 
 
-%\begin{frame}
+%\begin{frame}\pw\Large
 %\frametitle{Kalman Filter/Observer/Estimator}
 %\framesubtitle{An Observer (Estimator): The Kalman Filter}
 %
-%\footnote{\tiny\hspace{-0.23in} \href{http://greg.czerniak.info/guides/kalman1/}{http://greg.czerniak.info/guides/kalman1/}}
+%\footnotetext{\tiny\hspace{-0.23in} \href{http://greg.czerniak.info/guides/kalman1/}{http://greg.czerniak.info/guides/kalman1/}}
 %\scriptsize \vspace{0.1in}An example usage of the Kalman filter:
 %\begin{figure}[h]
 %\centering
@@ -1312,6 +1290,19 @@ A &= \frac { \muone \vartwo + \mutwo \varone }{ \varone + \vartwo}\\\\
 %\end{figure}
 %\end{frame}
 
-
+\begin{frame}\pw\Large
+\frametitle{Kalman Filter/Observer/Estimator}
+\framesubtitle{Introduction \tiny cont.}
+\footnotetext{\tiny\hspace{-0.23in} \href{http://www.cl.cam.ac.uk/~rmf25/papers/Understanding the Basis of the Kalman Filter.pdf}{Faragher, Ramsey, \emph{Understanding the Basis of the Kalman Filter Via a Simple and Intuitive Derivation}, IEEE Signal Processing Magazine, Sep 2012}}
+\begin{itemize}
+\item The Kalman filter is over 50 years old but is still one of the most important and common \underline{data fusion} algorithms in use today
+\item The great success of the Kalman filter is due to 
+\begin{itemize}\scriptsize
+\item its small computational requirement
+\item elegant recursive properties, and 
+\item its status as the optimal estimator for one-dimensional linear systems with Gaussian error statistics
+\end{itemize}
+\end{itemize}
+\end{frame}
 
 \end{document}

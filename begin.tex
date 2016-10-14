@@ -12,18 +12,18 @@
 \bibliography{MyCitations}
 \usepackage{animate}
 \usepackage{appendixnumberbeamer}
-
+\usepackage{listings}
 
 \definecolor{darkgreen}{rgb}{0,0.5,0}
 
 %page numbers
-\newcommand{\mypagenumwhite}
+\newcommand{\pw} %page number in white color
 {
 \begin{textblock*}{1in}(4.4in, 0.02in)
 {\small \color[rgb]{1,1,1}{\insertframenumber~/~\inserttotalframenumber}} 
 \end{textblock*}
 }
-\newcommand{\mypagenumblack}
+\newcommand{\pb} %page number in black color
 {
 \begin{textblock*}{1in}(4.4in, 0.02in)
 {\small \color[rgb]{0,0,0}{\insertframenumber~/~\inserttotalframenumber}} 
@@ -61,6 +61,10 @@
 	\tiny \citeauthor{#1}, \citetitle{#1}, \citeurl{#1}
 }
 
-\setbeamertemplate{itemize/enumerate body begin}{\setlength{\leftmargini}{-0.1cm}}
+	
+	\makeatletter
+  \newcommand\tinyvvv{\@setfontsize\tinyvvv{0.5pt}{0.5}}
+\makeatother
+
 \setbeamercolor{block title}{bg=blue}
 %\setbeamercolor{block title}{bg=Bittersweet}
