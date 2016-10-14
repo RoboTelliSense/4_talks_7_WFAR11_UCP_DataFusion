@@ -9,3 +9,4 @@ rm *.blg
 rm *.bbl
 rm *.vrb
 rm *.run.xml
+rm *-blx.bib

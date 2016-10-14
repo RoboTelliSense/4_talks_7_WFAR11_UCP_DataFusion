@@ -1,0 +1,66 @@
+\PassOptionsToPackage{dvipsnames}{xcolor}
+\documentclass[notes]{beamer}
+\usepackage{tikz}
+\usetheme{_SalmanWarsaw}
+\setbeamertemplate{navigation symbols}{}
+%\setbeamertemplate{background}[grid][step=1cm] %default  page size in Beamer is 128mm x 96mm, with an 8 mm grid, this is 16x12
+
+\usepackage[absolute,overlay]{textpos}
+\usepackage{graphicx, url}
+\usepackage[backend=bibtex]{biblatex}
+\defbibheading{bibliography}[\bibname]{} %this prevents \printbibliography from producing an extra section
+\bibliography{MyCitations}
+\usepackage{animate}
+\usepackage{appendixnumberbeamer}
+
+
+\definecolor{darkgreen}{rgb}{0,0.5,0}
+
+%page numbers
+\newcommand{\mypagenumwhite}
+{
+\begin{textblock*}{1in}(4.4in, 0.02in)
+{\small \color[rgb]{1,1,1}{\insertframenumber~/~\inserttotalframenumber}} 
+\end{textblock*}
+}
+\newcommand{\mypagenumblack}
+{
+\begin{textblock*}{1in}(4.4in, 0.02in)
+{\small \color[rgb]{0,0,0}{\insertframenumber~/~\inserttotalframenumber}} 
+\end{textblock*}
+}
+   
+%write ``extra slides'' on extra slides   
+\newcommand{\extraslides}
+{
+\begin{textblock*}{1in}(0.1in, 0.02in)
+{\large \color[rgb]{1,0,0}{Extra slides}}
+\end{textblock*}
+}
+ 
+%change margin 
+\newenvironment{changemargin}[2]
+{
+  	\begin{list}{}
+{
+\setlength{\topsep}{0pt}%
+\setlength{\leftmargin}{#1}%
+\setlength{\rightmargin}{#2}%
+\setlength{\listparindent}{\parindent}%
+\setlength{\itemindent}{\parindent}%
+\setlength{\parsep}{\parskip}%
+}
+  	\item[]
+}
+{\end{list}
+}    
+    
+%how to cite    
+\newcommand{\myciteurl}[1]
+{
+	\tiny \citeauthor{#1}, \citetitle{#1}, \citeurl{#1}
+}
+
+\setbeamertemplate{itemize/enumerate body begin}{\setlength{\leftmargini}{-0.1cm}}
+\setbeamercolor{block title}{bg=blue}
+%\setbeamercolor{block title}{bg=Bittersweet}
